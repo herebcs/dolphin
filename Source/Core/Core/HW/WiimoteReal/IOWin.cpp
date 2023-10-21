@@ -1008,8 +1008,8 @@ bool ForgetWiimote(BLUETOOTH_DEVICE_INFO_STRUCT& btdi)
     {
       // Make Windows forget about device so it will re-find it if visible.
       // This is also required to detect a disconnect for some reason..
-      NOTICE_LOG_FMT(WIIMOTE, "Removing remembered Wiimote.");
-      pBluetoothRemoveDevice(&btdi.Address);
+      NOTICE_LOG_FMT(WIIMOTE, "SKIPPED: Removing remembered Wiimote.");
+      //pBluetoothRemoveDevice(&btdi.Address);
       return true;
     }
   }
